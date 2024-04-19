@@ -6,7 +6,6 @@ XELIS_TOGGLE_FILE="$REPO_DIR/scrypts/update_blockchain"
 MINER_NAME="xelis_miner"
 SCRIPT_DIR="$REPO_DIR/scrypts"
 FIRST_RUN_MARKER="$REPO_DIR/first_run_marker"  # File to check if it's the first run
-SLEEP_DURATION=15
 
 # Check and execute on first run
 if [[ ! -f "$FIRST_RUN_MARKER" && "$CURRENT_TOGGLE" == "1" ]]; then
@@ -58,6 +57,13 @@ update_xelis_blockchain() {
 
 while true; do
     update_repo_and_check_toggle
+
+    SLEEP_DURATION_FILE="/root/xelis/trigger_miner/scrypts/sleep_duration"
+    if [ -f "$SLEEP_DURATION_FILE" ]; then
+        SLEEP_DURATION=$(cat "$SLEEP_DURATION_FILE")
+    else
+        SLEEP_DURATION="15"
+    fi
 
     # Ensure the toggle file exists before trying to read it
     if [ -f "$XELIS_TOGGLE_FILE" ]; then
