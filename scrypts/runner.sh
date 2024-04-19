@@ -9,7 +9,7 @@ FIRST_RUN_MARKER="$REPO_DIR/first_run_marker"  # File to check if it's the first
 SLEEP_DURATION=15
 
 # Check and execute on first run
-if [ ! -f "$FIRST_RUN_MARKER" ]; then
+if [[ ! -f "$FIRST_RUN_MARKER" && "$CURRENT_TOGGLE" == "1" ]]; then
     echo "First run detected. Executing on_script.sh"
     $SCRIPT_DIR/on_script.sh &
     touch "$FIRST_RUN_MARKER"
