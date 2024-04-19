@@ -1,5 +1,5 @@
 #!/bin/bash
-REPO_DIR="/root/xelis/trigger-miner"
+REPO_DIR="/root/xelis/trigger_miner"
 XELIS_DIR="/root/xelis/xelis-blockchain"
 TOGGLE_FILE="$REPO_DIR/scrypts/toggle"
 XELIS_TOGGLE_FILE="$REPO_DIR/scrypts/update_blockchain"
