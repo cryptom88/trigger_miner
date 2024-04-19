@@ -38,6 +38,7 @@ update_repo_and_check_toggle() {
         fi
     elif [ "$CURRENT_TOGGLE" == "0" ]; then
         pkill -f "$MINER_NAME"
+        echo "Heartbeat..."
     else
         echo "Unexpected content in toggle file: $CURRENT_TOGGLE"
     fi
