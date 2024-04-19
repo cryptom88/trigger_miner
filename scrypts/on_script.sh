@@ -2,7 +2,7 @@
 MINER_PATH="/root/xelis/xelis-blockchain/target/release/xelis_miner"
 MINER_ADDRESS="xet:rc7nactk8xfh5xyatqnh6cea2l33rrxc9k703xj02pek9r4c4e3sqmxlghh"
 DAEMON_ADDRESS="161.97.169.235:8080"
-NUM_THREADS_FILE="/root/xelis/trigger-miner/scrypts/threads_count"
+NUM_THREADS_FILE="/root/xelis/trigger_miner/scrypts/threads_count"
 
 # Retrieve the hostname and append the prefix 'mach_'
 HOST_NAME=$(hostname)  # Get the current system hostname
