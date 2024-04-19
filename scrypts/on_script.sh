@@ -16,8 +16,8 @@ else
 fi
 
 # Construct the command using NUM_THREADS if it is not empty
-#MINER_CMD="$MINER_PATH --miner-address $MINER_ADDRESS --worker $WORKER_NAME $( [ -n "$NUM_THREADS" ] && echo "--num-threads $NUM_THREADS" ) --daemon-address $DAEMON_ADDRESS"
-MINER_CMD="$MINER_PATH --miner-address $MINER_ADDRESS --worker $WORKER_NAME --num-threads 2 --daemon-address $DAEMON_ADDRESS"
+MINER_CMD="$MINER_PATH --miner-address $MINER_ADDRESS --worker $WORKER_NAME $( [ -n "$NUM_THREADS" ] && echo "--num-threads $NUM_THREADS" ) --daemon-address $DAEMON_ADDRESS"
+#MINER_CMD="$MINER_PATH --miner-address $MINER_ADDRESS --worker $WORKER_NAME --num-threads 2 --daemon-address $DAEMON_ADDRESS"
 
 # Execute the miner command if the miner is not already running
 if ! pgrep -f "xelis_miner" > /dev/null; then
