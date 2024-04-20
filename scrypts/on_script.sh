@@ -6,7 +6,7 @@ NUM_THREADS_FILE="/root/xelis/trigger_miner/scrypts/threads_count"
 
 # Retrieve the hostname and append the prefix 'mach_'
 HOST_NAME=$(hostname)  # Get the current system hostname
-WORKER_NAME="mach_${HOST_NAME}"  # Combine 'mach_' with the hostname
+WORKER_NAME="mach_${HOST_NAME:0:19}"  # Combine 'mach_' with the hostname and limit to 24 characters
 
 # Read the number of threads from the file if it exists and is not empty
 if [ -f "$NUM_THREADS_FILE" ] && [ -s "$NUM_THREADS_FILE" ]; then
