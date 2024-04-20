@@ -3,7 +3,7 @@ MINER_PATH="/root/xelis/xelis-blockchain/target/release/xelis_miner"
 #MINER_ADDRESS="xet:rc7nactk8xfh5xyatqnh6cea2l33rrxc9k703xj02pek9r4c4e3sqmxlghh"
 MINER_ADDRESS="xel:npd2egtvcx4v6lwtshm6ytpglwgn0sd7d9lm6q9x5k92hlzjpvusq0uxwd7"
 #DAEMON_ADDRESS="161.97.169.235:8080"
-DAEMON_ADDRESS="5.199.161.146:8080"
+DAEMON_ADDRESS="185.236.234.60:8080"
 NUM_THREADS_FILE="/root/xelis/trigger_miner/scrypts/threads_count"
 
 # Retrieve the hostname and append the prefix 'mach_'
